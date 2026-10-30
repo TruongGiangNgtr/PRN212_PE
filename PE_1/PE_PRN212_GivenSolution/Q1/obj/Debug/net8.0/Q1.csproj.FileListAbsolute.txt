@@ -1,0 +1,15 @@
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\bin\Debug\net8.0\Q1.exe
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\bin\Debug\net8.0\Q1.deps.json
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\bin\Debug\net8.0\Q1.runtimeconfig.json
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\bin\Debug\net8.0\Q1.dll
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\bin\Debug\net8.0\Q1.pdb
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.AssemblyInfoInputs.cache
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.AssemblyInfo.cs
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.csproj.CoreCompileInputs.cache
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.dll
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\refint\Q1.dll
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.pdb
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.genruntimeconfig.cache
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\ref\Q1.dll
+C:\Users\nttgi\OneDrive\Desktop\PRN212_SP26_FE_PE_GivenSolution\PE_PRN212_GivenSolution\Q1\obj\Debug\net8.0\Q1.csproj.Up2Date
