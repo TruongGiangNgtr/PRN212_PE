@@ -23,7 +23,7 @@ namespace Q1
             _onlineCourses.Add(course);
         }
 
-        public bool RegisterStudent(string courseCode, int quantity)
+        public bool RegisterCourse(string courseCode, int quantity)
         {
             var course = _onlineCourses.FirstOrDefault(c => c.CourseCode == courseCode);
             if (course == null)

@@ -22,7 +22,7 @@
 
             try
             {
-                courseManager.RegisterStudent("CS101", 0);
+                courseManager.RegisterCourse("CS101", 0);
             }
             catch (ArgumentException ex)
             {
@@ -31,7 +31,7 @@
 
             try
             {
-                courseManager.RegisterStudent("CS105", 10);
+                courseManager.RegisterCourse("CS105", 10);
             }
             catch (InvalidOperationException ex)
             {

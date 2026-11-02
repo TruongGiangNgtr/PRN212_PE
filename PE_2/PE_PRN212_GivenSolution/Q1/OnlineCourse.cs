@@ -23,10 +23,9 @@ namespace Q1
 
         public bool RegisterStudent(int quantity)
         {
-            if (quantity > 0)
+            if (quantity <= 0)
             {
                 throw new ArgumentException("Registration quantity must be positive");
-                return false;
             }
             if (CurrentEnrollment + quantity > Capacity)
             {
