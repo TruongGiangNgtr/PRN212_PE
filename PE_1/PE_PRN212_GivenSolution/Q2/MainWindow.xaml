@@ -5,8 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Q2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="800">
 
+    <Grid>
+        <GroupBox HorizontalAlignment="Center" Height="69" Header="FILTER AREA" Margin="0,50,0,0" VerticalAlignment="Top" Width="641">
+            <Grid Margin="0,0,-2,0">
+                <Label Content="Category :" HorizontalAlignment="Left" Margin="10,8,0,12" Width="55" FontSize="10" />
+                <ComboBox x:Name="cmbCategory" HorizontalAlignment="Left" Height="20" Margin="65,11,0,0" VerticalAlignment="Top" Width="142" />
+
+                <Label Content="Supplier :" HorizontalAlignment="Left" Margin="212,10,0,10" Width="54" FontSize="10" />
+                <ComboBox x:Name="cmbSupplier" HorizontalAlignment="Left" Height="20" Margin="271,11,0,0" VerticalAlignment="Top" Width="184" />
+
+                <Button Content="Filter" HorizontalAlignment="Left" Margin="460,11,0,0" VerticalAlignment="Top" Click="Filter_Click" Width="51" />
+                <Button Content="Clear Filter" HorizontalAlignment="Left" Margin="527,11,0,0" VerticalAlignment="Top" Click="ClearFilter_Click" Width="80" />
+            </Grid>
+        </GroupBox>
+
+        <GroupBox HorizontalAlignment="Center" Height="199" Header="PRODUCT LIST" Margin="0,135,0,0" VerticalAlignment="Top" Width="641">
+            <Grid Height="173" Margin="0,0,-2,0">
+                <DataGrid x:Name="dgProducts" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="7,20,0,10" Width="614" d:ItemsSource="{d:SampleData ItemCount=10}" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="3" SelectionChanged="DataGrid_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ProductId}" Width="50" />
+
+                        <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}" Width="200" />
+
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="100" />
+
+                        <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="100" />
+
+                        <DataGridTextColumn Header="Category" Binding="{Binding CategoryName}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox HorizontalAlignment="Center" Height="207" Header="ADD NEW PRODUCT" Margin="0,353,0,0" VerticalAlignment="Top" Width="640">
+        </GroupBox>
+        <Label Content="Product Name:" HorizontalAlignment="Left" Height="27" Margin="89,394,0,0" VerticalAlignment="Top" Width="88" />
+        <Label Content="Price:" HorizontalAlignment="Center" Height="27" Margin="0,394,0,0" VerticalAlignment="Top" Width="40" />
+
+        <Label Content="Stock:" HorizontalAlignment="Left" Height="27" Margin="539,394,0,0" VerticalAlignment="Top" Width="46" />
+
+        <TextBox x:Name="txtProductName" HorizontalAlignment="Left" Height="27" Margin="177,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" TextChanged="TextBox_TextChanged" />
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="27" Margin="420,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" TextChanged="TextBox_TextChanged" />
+        <TextBox x:Name="txtStock" HorizontalAlignment="Left" Height="27" Margin="585,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" TextChanged="TextBox_TextChanged" />
+        <Label Content="Category:" HorizontalAlignment="Left" Height="26" Margin="89,426,0,0" VerticalAlignment="Top" Width="65" />
+        <Label Content="Suppliers:" HorizontalAlignment="Left" Height="26" Margin="89,458,0,0" VerticalAlignment="Top" Width="65" />
+
+        <Button Content="Add Product" HorizontalAlignment="Left" Margin="506,520,0,0" VerticalAlignment="Top" Height="30" Width="112" Click="AddProduct_Click" />
+
+        <Button Content="Clear Form" HorizontalAlignment="Left" Margin="625,520,0,0" VerticalAlignment="Top" Width="79" Height="30" Click="ClearForm_Click" />
+
+        <ComboBox x:Name="cmbCategoryAddProduct"
+          HorizontalAlignment="Left"
+          VerticalAlignment="Top"
+          Margin="159,428,0,0"
+          Width="121"
+          Height="24" />
+
+        <ListBox x:Name="lbSuppliers" Margin="159,458,400,34" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding SupplierName}"
+                              Checked="SupplierCheckBox_Checked"
+                              Unchecked="SupplierCheckBox_Unchecked" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
