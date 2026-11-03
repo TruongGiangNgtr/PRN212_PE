@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Q2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="650" Width="800">
+    <Grid Margin="0,0,0,-74">
+        <GroupBox HorizontalAlignment="Center" Height="107" Header="FILTER AREA" Margin="0,19,0,0" VerticalAlignment="Top" Width="780">
+            <Grid Margin="20,0,0,0">
+                <Label Content="Genre:" HorizontalAlignment="Left" Height="26" Margin="20,29,0,29" Width="49" />
+                <Label Content="Studio:" HorizontalAlignment="Left" Height="26" Margin="271,29,0,29" Width="50" />
+                <ComboBox x:Name="cmbGenre" HorizontalAlignment="Left" Height="26" Margin="69,0,0,0" VerticalAlignment="Center" Width="180" />
+                <ComboBox x:Name="cmbStudio" HorizontalAlignment="Left" Height="26" Margin="326,0,0,0" VerticalAlignment="Center" Width="168" />
+                <Button x:Name="FilterButton" Content="Filter" HorizontalAlignment="Left" Margin="515,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.342,0.94" Width="69" Click="Filter_Click" Height="26" />
+                <Button x:Name="ClearFilterButton" Content="Clear Filter" HorizontalAlignment="Left" Margin="600,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.342,0.94" Width="83" Click="ClearFilter_Click" Height="26" />
+            </Grid>
+        </GroupBox>
 
+        <GroupBox HorizontalAlignment="Center" Height="300" Header="MOVIE LIST" Margin="0,131,0,0" VerticalAlignment="Top" Width="780">
+            <Grid Margin="48,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="680*" />
+                    <ColumnDefinition Width="11*" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <DataGrid x:Name="dgMovieList" HorizontalAlignment="Left" Height="241" VerticalAlignment="Center" Width="751" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Grid.ColumnSpan="3" Margin="-41,0,0,0">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="MovieId" Binding="{Binding MovieId}" Width="50" />
+                        <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="140" />
+                        <DataGridTextColumn Header="RatingCode" Binding="{Binding RatingCode}" Width="150" />
+                        <DataGridTextColumn Header="ReleaseYear" Binding="{Binding ReleaseYear}" Width="80  " />
+                        <DataGridTextColumn Header="DurationMinutes" Binding="{Binding DurationMinutes}" Width="80  " />
+                        <DataGridTextColumn Header="GenreName" Binding="{Binding GenreName}" Width="100" />
+                        <DataGridTextColumn Header="StudioName" Binding="{Binding StudioName}" Width="130" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox HorizontalAlignment="Center" Height="145" Header="ADD NEW MOVIE" Margin="0,448,0,0" VerticalAlignment="Top" Width="780">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="27*" />
+                    <ColumnDefinition Width="101*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="Title:" HorizontalAlignment="Left" Height="23" Margin="10,21,0,0" VerticalAlignment="Top" Width="37" />
+                <Label Content="DurationMinutes:" HorizontalAlignment="Left" Height="23" Margin="5,62,0,0" VerticalAlignment="Top" Width="110" />
+                <Label Content="RatingCode:" HorizontalAlignment="Left" Height="23" Margin="69,21,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" />
+                <Label Content="Genre:" HorizontalAlignment="Left" Height="23" Margin="116,61,0,0" VerticalAlignment="Top" Width="50" Grid.Column="1" />
+                <Label Content="Studio:" HorizontalAlignment="Left" Height="23" Margin="349,61,0,0" VerticalAlignment="Top" Width="49" Grid.Column="1" />
+                <Label Content="ReleaseYear:" HorizontalAlignment="Left" Height="23" Margin="348,21,0,0" VerticalAlignment="Top" Width="82" Grid.Column="1" />
+
+                <TextBox x:Name="txtTitle"  HorizontalAlignment="Left" Height="23" Margin="72,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                </TextBox>
+                <TextBox x:Name="txtDurationMinutes"  HorizontalAlignment="Left" Height="23" Margin="115,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Grid.ColumnSpan="2" />
+                <TextBox x:Name="txtRatingCode"  HorizontalAlignment="Left" Height="23" Margin="154,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Grid.Column="1" />
+                <TextBox x:Name="txtReleaseYear"  HorizontalAlignment="Left" Height="23" Margin="435,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155" Grid.Column="1" />
+                <ComboBox x:Name="cmbGenre_AddMovie" HorizontalAlignment="Left" Margin="171,64,0,0" VerticalAlignment="Top" Width="163" Grid.Column="1" />
+                <ComboBox x:Name="cmbStudio_AddMovie" HorizontalAlignment="Left" Margin="403,64,0,0" VerticalAlignment="Top" Width="187" Grid.Column="1" />
+            </Grid>
+        </GroupBox>
+        <Button Content="Add Movie" HorizontalAlignment="Left" Margin="591,561,0,0" VerticalAlignment="Top" Width="75" Click="AddMovie_Click" />
+        <Button Content="Clear Form" HorizontalAlignment="Left" Margin="681,561,0,0" VerticalAlignment="Top" Width="84" Click="ClearForm_Click" />
     </Grid>
 </Window>

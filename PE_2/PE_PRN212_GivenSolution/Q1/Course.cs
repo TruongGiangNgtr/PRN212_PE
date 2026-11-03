@@ -15,15 +15,13 @@ namespace Q1
 
         public Course(string courseCode, string title, int capacity, int currentEnrollment)
         {
-            if (capacity < 0)
+            if (capacity <= 0)
             {
                 throw new ArgumentOutOfRangeException("Capacity must be greater than 0");
-                return;
             }
             if (currentEnrollment < 0 || currentEnrollment > capacity)
             {
-                throw new ArgumentOutOfRangeException("Current enrollment must be between 0 and capacity");
-                return;
+                throw new ArgumentOutOfRangeException("CurrentEnrollment must be between 0 and capacity");
             }
 
             CourseCode=courseCode;
